@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #222222;
+  --secondary-color: #141212;
+  --text-color: #c7c7c7;
+  --accent-color: #ffba00;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lekton", sans-serif;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+}
+
+.btn-cta {
+  padding: 2rem;
+  width: 50%;
+  border-radius: 0;
+  background-color: var(--primary-color);
+  border-top: 0.5px solid #c7c7c7;
+  color: #c7c7c7;
+  font-weight: 700;
+  word-spacing: 5px;
+  transition: 0.2s all ease;
+}
+
+.btn-cta:first-child {
+    border-right: 0.5px solid #c7c7c7;
+
+}
+
+.btn-cta:hover {
+  word-spacing: 8px;
+  color: var(--accent-color);
+  background-color: #222222;
+}
+
+.hero {
+  width: 40vw;
+  display: grid;
+  height: 80vh;
+  max-height: 700px;
+  grid-template-rows: 50% 1fr auto;
+}
+
+.cover {
+  height: 50%;
+}
+
+.cta-comp {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222222;
+  color: #c7c7c7;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+}
+
+.info img {
+  margin-bottom: 2rem;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px var(--accent-color);
+}
+
+.info-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: -60px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  flex: 1 0 25%; /* Adjust this value to change the number of images in a row */
+  box-sizing: border-box;
+}
+
+.aspect-ratio-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* This value defines the aspect ratio, e.g., 1:1 (square) */
+  z-index: -999;
+}
+
+.aspect-ratio-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-social {
+  font-size: 2rem;
+}
+
+.nav-social a {
+    color: var(--text-color);
+    transition: .2s all ease;
+}
+
+.nav-social a:hover {
+    color: var(--accent-color);
+}
+
+.social-item {
+  margin: 10px;
 }
